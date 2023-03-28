@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { fetchGithubStars } from './fetchGithubStars'
 
-const inter = Inter({ subsets: ['latin'] })
+export default async function Home() {
+  const stars = await fetchGithubStars()
 
-export default function Home() {
   return (
-    <main>
-      <div>The Index Page
-      </div>
-    </main>
+    <>
+      <div>The Index Page</div>
+      <p>Next.js has {stars} ⭐️</p>
+    </>
   )
 }
