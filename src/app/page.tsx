@@ -4,7 +4,6 @@ import { fetchGithubStars } from './fetchGithubStars'
 
 export default async function Home() {
   const stars = await fetchGithubStars()
-  console.log("Hi Index Page")
 
   return (
     <>
