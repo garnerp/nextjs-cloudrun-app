@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import { fetchGithubStars } from '../fetchGithubStars'
 import { Locale } from '../i18n-config'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home({
   params: { lang },
 }: {
