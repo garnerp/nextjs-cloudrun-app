@@ -1,15 +1,11 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { fetchGithubStars } from '../fetchGithubStars'
-import { Locale } from '../i18n-config'
+import { fetchGithubStars } from './fetchGithubStars'
+import { Locale } from './i18n-config'
 
 export const dynamic = 'force-dynamic'
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale }
-}) {
+export default async function Home({ params: { lang }, }: { params: { lang: Locale } }) {
   const stars = await fetchGithubStars()
 
   return (
