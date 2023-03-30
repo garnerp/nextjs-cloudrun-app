@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
 import { NextRequest } from 'next/server'
 
-//import { i18n } from './i18n-config'
+import { i18n } from './i18n-config'
 
-const i18n = {
-    defaultLocale: 'en',
-    locales: ['en', 'de', 'cs'],
-}
+//const i18n = {
+//    defaultLocale: 'en',
+//    locales: ['en', 'de', 'cs'],
+//}
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
@@ -36,7 +36,7 @@ export function middleware(request: NextRequest) {
     //   ].includes(pathname)
     // )
     //   return
-    console.log("In the Middle")
+
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
