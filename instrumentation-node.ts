@@ -17,15 +17,15 @@ import {
 } from '@opentelemetry/sdk-trace-node'
 */
 
-import { TraceExporter } from "@google-cloud/opentelemetry-cloud-trace-exporter";
+//import { TraceExporter } from "@google-cloud/opentelemetry-cloud-trace-exporter";
 
 const sdk = new NodeSDK({
     sampler: new AlwaysOnSampler(),
     resource: new Resource({
         [SemanticResourceAttributes.SERVICE_NAME]: 'garner-app',
     }),
-    //spanProcessor: new SimpleSpanProcessor(new TraceExporter()),
-    spanProcessor: new BatchSpanProcessor(new TraceExporter()),
+    spanProcessor: new SimpleSpanProcessor(new OTLPTraceExporter()),
+    //    spanProcessor: new BatchSpanProcessor(new TraceExporter()),
 })
 sdk.start()
 
