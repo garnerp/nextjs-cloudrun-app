@@ -35,6 +35,7 @@
     "**/*.tsx",
     "next.config.js",
     ".next/types/**/*.ts",
+    "src/app/providers.js",
   ],
   "exclude": [
     "node_modules"
