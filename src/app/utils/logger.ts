@@ -49,6 +49,7 @@ export default logger;
 
 import pino from 'pino'
 
-const logger = pino({ browser: { asObject: true } });
+//const logger = pino({ browser: { asObject: true } });
+const logger = pino();
 
 export default logger;

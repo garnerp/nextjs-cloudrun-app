@@ -8,10 +8,15 @@ export async function fetchGithubStars() {
 
     const tracer = opentelemetry.trace.getTracer('basic')
     const span = tracer.startSpan('fetchGithubStars')
+
+    { cache: 'no-store' }
+
+
     return fetch('https://api.github.com/repos/vercel/next.js', {
-        next: {
-            revalidate: 60,
-        },
+        //        next: {
+        //            revalidate: 60,
+        //        },
+        cache: 'no-store'  // this stop the entire page from getting cached I think.  Impacts logs and everything
     })
         .then((res) => res.json())
         .then((data) => data.stargazers_count)
