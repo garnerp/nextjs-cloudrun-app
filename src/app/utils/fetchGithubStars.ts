@@ -1,5 +1,6 @@
 import opentelemetry from "@opentelemetry/api";
 import logger from '../../app/utils/logger'
+import { faro } from "@grafana/faro-web-sdk";
 
 
 export async function fetchGithubStars() {

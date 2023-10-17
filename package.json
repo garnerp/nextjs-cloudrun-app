@@ -12,6 +12,8 @@
     "@formatjs/intl-localematcher": "^0.4.2",
     "@google-cloud/logging-bunyan": "^5.0.0",
     "@google-cloud/opentelemetry-cloud-trace-exporter": "^2.1.0",
+    "@grafana/faro-react": "^1.2.1",
+    "@grafana/faro-web-sdk": "^1.2.1",
     "@opentelemetry/auto-instrumentations-node": "^0.39.2",
     "@opentelemetry/exporter-trace-otlp-http": "^0.43.0",
     "@opentelemetry/instrumentation-http": "^0.43.0",

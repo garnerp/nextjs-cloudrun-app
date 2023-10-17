@@ -3,11 +3,14 @@ import { Inter } from 'next/font/google'
 import { fetchGithubStars } from './utils/fetchGithubStars'
 import logger from '../app/utils/logger'
 
+import { faro } from '@grafana/faro-web-sdk';
+
 export default async function Home() {
 
   logger.info("Info from page")
 
   const stars = await fetchGithubStars()
+  faro.api.pushLog(['Faro was initialized']);
 
   return (
     <>
