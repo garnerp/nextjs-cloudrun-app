@@ -11,5 +11,10 @@
 module.exports = {
   experimental: {
     instrumentationHook: true,
-  },
+    logging:
+    {
+      level: 'verbose',
+      fullUrl: true
+    }
+  }
 }
