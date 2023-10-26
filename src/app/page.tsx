@@ -5,7 +5,7 @@ import logger from '../app/utils/logger'
 
 export default async function Home() {
 
-  logger.info("Info from page")
+  //  logger.info("Info from page")
 
   const stars = await fetchGithubStars()
 
@@ -18,6 +18,8 @@ export default async function Home() {
       <button>Hi</button>
       <button>This is #2</button>
       Did this work?  Yes it did.  Test.
+      Next v14 on Turbo!
+      Is it fast?
     </>
   )
 }
