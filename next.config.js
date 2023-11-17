@@ -2,7 +2,7 @@
 //const nextConfig = {
 //  experimental: {
 //    appDir: true,
-//    instrumentationHook: true 
+//    instrumentationHook: true
 //  },
 //}
 
@@ -10,11 +10,11 @@
 
 module.exports = {
   experimental: {
+    output: "standalone",
     instrumentationHook: true,
-    logging:
-    {
-      level: 'verbose',
-      fullUrl: true
-    }
-  }
-}
+    logging: {
+      level: "verbose",
+      fullUrl: true,
+    },
+  },
+};
