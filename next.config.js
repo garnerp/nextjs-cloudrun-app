@@ -9,8 +9,8 @@
 //module.exports = nextConfig
 
 module.exports = {
+  output: "standalone",
   experimental: {
-    output: "standalone",
     instrumentationHook: true,
     logging: {
       level: "verbose",
