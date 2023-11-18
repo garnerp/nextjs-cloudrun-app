@@ -29,6 +29,7 @@ export default async function Home() {
       User: {sess?.user?.email}
       <br />
       <CC />
+      Build time on new page?
     </>
   );
 }
